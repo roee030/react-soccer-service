@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import data_file from './result_played.csv'
+import {csv} from "d3"
+
+
 
 function App() {
-  return (
+  const results_promise = new Promise((resolve,reject)=>{
+    resolve(csv(data_file))
+  })
+  results_promise.then((results)=>{
+    console.log("success",results)
+  })
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
