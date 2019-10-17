@@ -23,10 +23,11 @@ function logging ()
       if((!total_team.inArray(results[i].away_team )))
         total_team.push(results[i].away_team)
     }
-    var tempArray = {}
+    var tempArray = []
     for(var i = 0 ; i < total_team.length ; i ++)
     {
-      tempArray[i] = {id:uniqID(),team:total_team[i]}
+      tempArray[i] = {id:uniqID(),team: total_team[i]}
+      
     }
     total_team = tempArray
 })
