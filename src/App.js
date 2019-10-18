@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
 import SearchBar from 'react-js-search';
-var data = require('./get_Data')
-var uniqID = require('uniq-id');
+import AutoComplete from './components/AutoComplete';
+var data1 = require('./get_Data')
+var data2 = require ('./result_played.csv')
+var helper = require('./helper')
 
 function App() {
-
- 
-  console.log(data.total_team)
-
-    return (
+  console.log(data1.tempArray)
+  return (
     <div className="App">
     
   
