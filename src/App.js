@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import AutoComplete from './components/AutoComplete';
-import data from './get_Data'
+//import data from './get_Data'
+import teams from './components/teams'
 var fs = require('fs'); 
 
 export default class App extends Component {
@@ -10,17 +11,20 @@ export default class App extends Component {
     this.state = {
       soccer_teams: [],
       tournaments: [],
+      result:[],
+      data: []
     }
-    console.log(data)
-   
+    
   }
+ 
 
 
   render() {
     return (
       <div>
       {
-      } 
+
+            } 
       </div>
     )
   }
