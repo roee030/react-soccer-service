@@ -17,9 +17,9 @@ function contains(a, obj) {
   }
   return false;
 }
-function logging ()
+async function logging ()
 {
-  new Promise((resolve,reject)=>{
+  await new Promise((resolve,reject)=>{
     resolve(csv(data_file))
   }).then((results)=>{
     for(var i = 0 ; i < results.length ; i++)
@@ -37,12 +37,10 @@ function logging ()
     }
     for(var i = 0 ; i < total_team.length ; i ++)
     {
-      tempArray.push({
-        id:uniqID(),
-        soccer_team: total_team[i]
-      })
+      tempArray =  (JSON.stringify(total_team))
+      //console.log(JSON.stringify(total_team))
     }
-    
+    return tempArray
 })
 }
 logging()
