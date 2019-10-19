@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import AutoComplete from './components/AutoComplete';
+import data from './get_Data'
 var fs = require('fs'); 
-
 
 export default class App extends Component {
   constructor(props){
@@ -11,7 +11,7 @@ export default class App extends Component {
       soccer_teams: [],
       tournaments: [],
     }
-   
+    console.log(data)
    
   }
 
@@ -20,12 +20,6 @@ export default class App extends Component {
     return (
       <div>
       {
-        this.state.data.map((value) =>
-        <div>
-          <span>{value.home_team}</span>
-         
-        </div>
-        )
       } 
       </div>
     )
