@@ -1,4 +1,3 @@
-import myJson from './data/results_teams.json';
+import myJson from './data/result_played.json';
 const data = JSON.stringify(myJson);
-console.log(data)
-module.exports = data
+export default data
